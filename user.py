@@ -1,20 +1,20 @@
-
+# import pyperclip #for copying and pasting to our clipboard
 
 
 class User:
     '''
-    create class that allows user to generate user account
+    Create class that generates new instances of users..
     '''
     
-    user list = []
+    user_list = []
     
-    def __init__(self,user_name,password):
+    def __init__(self, username, password):
         
         '''
         Method that defines the properties of a user.
         '''
         
-        self.user_name = user_name
+        self.username = username
         self.password = password
         
     def save_user(self):
@@ -23,5 +23,5 @@ class User:
         Method that saves new user instances.
         '''
         
-        User.user_list.append(self)
+        User.users_list.append(self)
         
