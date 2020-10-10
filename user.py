@@ -1,12 +1,12 @@
 
 
 
-# class User:
-#     '''
-#     create class that allows user to generate user account
-#     '''
+class User:
+    '''
+    create class that allows user to generate user account
+    '''
     
-#     user list = []
+    user list = []
     
 #     def __init__(self,user_name,password):
         
