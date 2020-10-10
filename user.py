@@ -8,14 +8,14 @@ class User:
     
     user list = []
     
-#     def __init__(self,user_name,password):
+    def __init__(self,user_name,password):
         
-#         '''
-#         Method that defines the properties of a user.
-#         '''
+        '''
+        Method that defines the properties of a user.
+        '''
         
-#         self.user_name = user_name
-#         self.password = password
+        self.user_name = user_name
+        self.password = password
         
 #     def save_user(self):
         
