@@ -24,19 +24,19 @@ class TestUser(unittest.TestCase):
         '''
         User.users_list= []
         
-    # def test_init(self):
-    #     '''
-    #     The test_init test case to test if the object is initialized properly
-    #     '''
-    #     self.assertEqual(self.new_user.username,'SophieCee')  
-    #     self.assertEqual(self.new_user.password,'1234!')  
+    def test_init(self):
+        '''
+        The test_init test case to test if the object is initialized properly
+        '''
+        self.assertEqual(self.new_user.username,'SophieCee')  
+        self.assertEqual(self.new_user.password,'1234!')  
         
-    # def test_save_user(self):
-    #     '''
-    #     The test_save_user to check whether we can save our user objects to our users_list
-    #     '''
-    #     self.new_user.save_user()
-    #     self.assertEqual(len(User.users_list),1)
+    def test_save_user(self):
+        '''
+        The test_save_user to check whether we can save our user objects to our users_list
+        '''
+        self.new_user.save_user()
+        self.assertEqual(len(User.users_list),1)
         
         
 
