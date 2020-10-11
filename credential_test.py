@@ -86,31 +86,31 @@ class TestCredential(unittest.TestCase):
         self.assertEqual(len(Credential.credential_list),2) 
             
 
-#     def test_copy_credentials(self):
-#         '''
-#         Function to test to if the copy credential method copies the correct credential.
-#         '''
-#         self.new_credential.save_credentials()
-#         test_credential = Credential('SophieCee', 'twitter', 'SophieO', '1234!')
-#         test_credential.save_credentials()
-#         found_credential = None
-#         for credential in Credential.credential_list:
-#             found_credential = Credential.find_by_social_name(
-#                 credential.social_name)
+    def test_copy_credentials(self):
+        '''
+        Function to test to if the copy credential method copies the correct credential.
+        '''
+        self.new_credential.save_credentials()
+        test_credential = Credential('SophieCee', 'twitter', 'SophieO', '1234!')
+        test_credential.save_credentials()
+        found_credential = None
+        for credential in Credential.credential_list:
+            found_credential = Credential.find_by_social_name(
+                credential.social_name)
             
-#             return pyperclip.copy(found_credential.password)
-#         Credential.copy_credentials(self.new_credential.site_name)
-#         self.assertEqual('1234!', pyperclip.paste())
-#         print(pyperclip.paste())
+            return pyperclip.copy(found_credential.password)
+        Credential.copy_credentials(self.new_credential.site_name)
+        self.assertEqual('1234!', pyperclip.paste())
+        print(pyperclip.paste())
         
-#     def test_display_credentials(self):
-#         '''
-#         test method that returns a list of all accounts added
-#         '''
-#         self.assertEqual(Credential.display_credentials(),Credential.credential_list)
+    def test_display_credentials(self):
+        '''
+        test method that returns a list of all accounts added
+        '''
+        self.assertEqual(Credential.display_credentials(),Credential.credential_list)
         
         
 
-# if __name__ == '__main__':
-#     unittest.main()
+if __name__ == '__main__':
+    unittest.main()
     
