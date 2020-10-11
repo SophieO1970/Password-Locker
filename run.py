@@ -31,3 +31,9 @@ def save_credentials(credential):
     Function to save a new user account
     '''
     Credential.save_credentials(credential)    
+    
+def generate_password(self, pass_len=10):
+
+        password_chars = string.ascii_letters + string.digits + string.punctuation
+
+        return ''.join(secrets.choice(password_chars) for i in range(int(pass_len)))    
