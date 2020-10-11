@@ -37,31 +37,31 @@ class TestCredential(unittest.TestCase):
         self.assertEqual(self.new_credential.password, '1234!')
         
         
-#     def test_save_credentials(self):
+    def test_save_credentials(self):
         
-#         '''
-#         test_save_credentials test to test if the object is saved into
-#          the credential list.
-#         '''
+        '''
+        test_save_credentials test to test if the object is saved into
+         the credential list.
+        '''
         
-#         self.new_credential.save_credentials()
-#         test_credential = Credential('SophieCee', 'twitter', 'SophieO', '1234!')
-#         test_credential.save_credentials()
-#         self.assertEqual(len(Credential.credential_list), 2)
+        self.new_credential.save_credentials()
+        test_credential = Credential('SophieCee', 'twitter', 'SophieO', '1234!')
+        test_credential.save_credentials()
+        self.assertEqual(len(Credential.credential_list), 2)
         
 
-#     def test_delete_credentials(self):
+    def test_delete_credentials(self):
         
-#         '''
-#         test_delete_credential test to test if the object is removed from
-#          the credential list.
-#          '''
+        '''
+        test_delete_credential test to test if the object is removed from
+         the credential list.
+         '''
          
-#         self.new_credential.save_credentials()
-#         test_credential = Credential('SophieCee', 'twitter', 'SophieO', '1234!') #new credential
-#         test_credential.save_credentials()
-#         self.new_credential.delete_credentials()
-#         self.assertEqual(len(Credential.credential_list), 1)
+        self.new_credential.save_credentials()
+        test_credential = Credential('SophieCee', 'twitter', 'SophieO', '1234!') #new credential
+        test_credential.save_credentials()
+        self.new_credential.delete_credentials()
+        self.assertEqual(len(Credential.credential_list), 1)
 
 #     def test_find_by_account_name(self):
 #         '''
