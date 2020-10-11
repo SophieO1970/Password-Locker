@@ -23,26 +23,25 @@ class Credential:
         self.password=password
     
     
-    # def save_credentials(self):
+    def save_credentials(self):
 
-    #     '''
-    #     save_credentials a method that saves accounts objects into the credential_list
-    #     '''
-    #     Credential.credential_list.append(self) 
+        '''
+        save_credentials a method that saves accounts objects into the credential_list
+        '''
+        Credential.credential_list.append(self) 
         
-    # def delete_credentials(self):
+    def delete_credentials(self):
         
-    #     '''
-    #     delete_credentials method deletes account objects saved in the credential_list.
-    #     '''
-    #     Credential.credential_list.remove(self)
+        '''
+        delete_credentials method deletes account objects saved in the credential_list.
+        '''
+        Credential.credential_list.remove(self)
         
-    # def generate_password(self, pass_len=10):
+    def generate_password(self, pass_len=10):
 
-    #     password_chars = string.ascii_letters + string.digits + string.punctuation
+        password_chars = string.ascii_letters + string.digits + string.punctuation
 
-    #     return ''.join(secrets.choice(password_chars) for i in range(int(pass_len)))
-    
+        return ''.join(secrets.choice(password_chars) for i in range(int(pass_len)))
     # def
     
     # @classmethod
