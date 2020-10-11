@@ -80,17 +80,17 @@ def main():
     print("Hello and welcome to your password locker")
     print("What is your name?")
     print('\n')
-      user_name= input()
+    user_name= input()
 
-    while true
-    print('\n')
-    print(f"Hello {user_name}! Use these short codes to navigate through")
-    print('\n')
+    while True:
+        print('\n')
+        print(f"Hello {user_name}! Use these short codes to navigate through")
+        print('\n')
     
-    print('cn - Create a new password locker account')
-    print('lg - Log in into your created account')
-    print('ex - Exit your password locker account')
-    print('\n')
+        print('cn - Create a new password locker account')
+        print('lg - Log in into your created account')
+        print('ex - Exit your password locker account')
+        print('\n')
     
     
     short_code = input().lower()
@@ -128,24 +128,26 @@ def main():
              print(f'Hello {login_username}. Welcome to your password locker account!')
              print ('\n')
 
-#     elif short_code == 'lg':
+    elif short_code == 'lg':
              
-#             print('Log in to your existing account')
-#             print('Username....')
-#             lg_username = input()
+            print('Log in to your existing account')
+            print('Username....')
+            lg_username = input()
 
-#             print('Password....')
-#             lg_password = input()
+            print('Password....')
+            lg_password = input()
 
-#             if lg_username != 'SophieCee' and lg_password != '1234!':
-#                 print('The account does not exist, please create an account')
-#             else:
-#                 print(f'Hello {lg_username}. Welcome to your password locker account!')
-#                 print ('\n')
-#     elif short_code == 'ex':
+            if lg_username != 'SophieCee' and lg_password != '1234!':
+                print('The account does not exist, please create an account')
+            else:
+                print(f'Hello {lg_username}. Welcome to your password locker account!')
+                print ('\n')
+    elif short_code == 'ex':
 
-#             print('Bye! Pass by again later!')
-#             break
-#     else:
-#             print('Error!Unknown short code! Please try again')
+        print('Bye! Pass by again later!')
+    else:
+            print('Error!Unknown short code! Please try again')
     
+   
+if __name__ == '__main__':
+	main()
