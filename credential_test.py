@@ -1,21 +1,21 @@
-# import unittest
-# from credential import Credential
+import unittest
+from credential import Credential
 
-# class TestCredential(unittest.TestCase):
+class TestCredential(unittest.TestCase):
 
-#     '''
-#     Test class that defines test cases for the credential class behaviour.
-#     Args:
-#         unittest.TestCase: TestCase class that helps in creating test cases.
-#     '''
+    '''
+    Test class that defines test cases for the credential class behaviour.
+    Args:
+        unittest.TestCase: TestCase class that helps in creating test cases.
+    '''
     
-#     def setUp(self):
+    def setUp(self):
 
-#         '''
-#         Set up method to run before each test cases.
-#         '''
+        '''
+        Set up method to run before each test cases.
+        '''
 
-#         self.new_credential = Credential('SophieCee', 'twitter','SophieO','1234!')    
+        self.new_credential = Credential('SophieCee', 'twitter','SophieO','1234!')    
     
 #     def tearDown(self):
 #         '''
