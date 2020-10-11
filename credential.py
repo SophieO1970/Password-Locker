@@ -59,19 +59,19 @@ class Credential:
             if credential.account_name== name:
                 return credential
 
-    # @classmethod
-    # def copy_credentials(cls, social_name):
-    #     '''
-    #     Class method that copies a credential's info after the credential's social account name is entered
-    #     '''
-    #     found_credential = cls.find_by_social_name(social_name)
-    #     return pyperclip.copy(found_credential.account_password)
+    @classmethod
+    def copy_credentials(cls, social_name):
+        '''
+        Class method that copies a credential's info after the credential's social account name is entered
+        '''
+        found_credential = cls.find_by_social_name(social_name)
+        return pyperclip.copy(found_credential.account_password)
     
-    # @classmethod
-    # def display_credentials(cls):
-    #     '''
-    #     This method displays saved credentials
-    #     '''
+    @classmethod
+    def display_credentials(cls):
+        '''
+        This method displays saved credentials
+        '''
 
-    #     return cls.credential_list
+        return cls.credential_list
 
