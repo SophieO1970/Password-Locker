@@ -26,6 +26,7 @@ def create_credential(username, social_name, account_name, password):
     '''
     new_credential = Credential(username, social_name, account_name, password)
     return new_credential
+
 def save_credentials(credential):
     '''
     Function to save a new user account
@@ -37,3 +38,10 @@ def generate_password(self, pass_len=10):
         password_chars = string.ascii_letters + string.digits + string.punctuation
 
         return ''.join(secrets.choice(password_chars) for i in range(int(pass_len)))    
+    
+def delete_credentials(self):
+        
+        '''
+        delete_credentials method deletes account objects saved in the credential_list.
+        '''
+        Credential.credential_list.remove(self)    
