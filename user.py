@@ -3,7 +3,7 @@ import pyperclip #for copying and pasting to our clipboard
 
 class User:
     '''
-    Create class that generates new instances of users..
+    Create class that generates new instances of users.
     '''
     
     user_list = []
@@ -20,7 +20,7 @@ class User:
     def save_user(self):
         
         '''
-        Method that saves new user instances.
+        Method that saves new user instances/object.
         '''
         
         User.users_list.append(self)

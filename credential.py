@@ -1,3 +1,8 @@
+from user import User
+import random #import random variable generator
+import string  #import string constants
+import pyperclip
+
 class Credential:
 
     '''
@@ -8,7 +13,7 @@ class Credential:
     
     
     
-    def __init__(self, username, social_name, account_name, password):
+    def __init__(self, username, account_name, password):
         '''
         __init__ method that define properties for our objects.
         Args:
@@ -18,7 +23,6 @@ class Credential:
         '''
         # instance variables
         self.username=username
-        self.social_name=social_name
         self.account_name=account_name
         self.password=password
     
@@ -42,8 +46,36 @@ class Credential:
         password_chars = string.ascii_letters + string.digits + string.punctuation
 
         return ''.join(secrets.choice(password_chars) for i in range(int(pass_len)))
-    # def
     
+    
+    @classmethod
+    def check_user(cls,user_name,password):
+        '''
+        Method that checks if the name and password entered exist in the users_list.
+        '''
+        current_user = ''
+        for user in User.user_list:
+        	if (user.user_name == user_name and user.password == password):
+        		current_user = user.user_name
+        return current_user
+
+
+    @classmethod
+    def credential_exist(cls, account_name):
+        '''
+        Method that checks if a credential exists from the credential list.
+        Args:
+            account_name:  account_name to search if it exists
+        Returns :
+            Boolean: True or false depending if the credential exists
+        '''
+        for credential in cls.credential_list:
+            if credential.account_name == account_name:
+                return True
+
+        return False
+
+
     @classmethod
     def find_by_account_name(cls,name):
         '''
@@ -60,11 +92,11 @@ class Credential:
                 return credential
 
     @classmethod
-    def copy_credentials(cls, social_name):
+    def copy_credentials(cls, account_name):
         '''
         Class method that copies a credential's info after the credential's social account name is entered
         '''
-        found_credential = cls.find_by_social_name(social_name)
+        found_credential = cls.find_by_social_name(account_name)
         return pyperclip.copy(found_credential.account_password)
     
     @classmethod
