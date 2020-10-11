@@ -73,17 +73,17 @@ class TestCredential(unittest.TestCase):
         credential_found = Credential.find_by_account_name('SophieO')
         self.assertEqual(credential_found.SophieO,test_credential.SophieO)
         
-#     def test_save_multiple_credentials(self):
-#         '''
-#         test_save_multiple_contact to check if we can save multiple
-#         objects to our credential_list
-#         '''    
+    def test_save_multiple_credentials(self):
+        '''
+        test_save_multiple_contact to check if we can save multiple
+        objects to our credential_list
+        '''    
 
-#         self.new_credential.save_credentials()
-#         test_credential =  Credential('SophieCee', 'twitter', 'SophieO', '1234!')
-#         test_credential.save_credentials()
+        self.new_credential.save_credentials()
+        test_credential =  Credential('SophieCee', 'twitter', 'SophieO', '1234!')
+        test_credential.save_credentials()
 
-#         self.assertEqual(len(Credential.credential_list),2) 
+        self.assertEqual(len(Credential.credential_list),2) 
             
 
 #     def test_copy_credentials(self):
