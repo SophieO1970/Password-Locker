@@ -17,24 +17,24 @@ class TestCredential(unittest.TestCase):
 
         self.new_credential = Credential('SophieCee', 'twitter','SophieO','1234!')    
     
-#     def tearDown(self):
-#         '''
-#         tearDown method that does clean up after each test case has run.
+    def tearDown(self):
+        '''
+        tearDown method that does clean up after each test case has run.
         
-#         '''
-#         Credential.credential_list = []
+        '''
+        Credential.credential_list = []
         
         
-#     def test_init(self):
+    def test_init(self):
 
-#         '''
-#         test_init test case to test if the object is initialized properly.
-#         '''
+        '''
+        test_init test case to test if the object is initialized properly.
+        '''
 
-#         self.assertEqual(self.new_credential.username, 'SophieCee')
-#         self.assertEqual(self.new_credential.social_name, 'twitter')
-#         self.assertEqual(self.new_credential.account_name, 'SophieO')
-#         self.assertEqual(self.new_credential.password, '1234!')
+        self.assertEqual(self.new_credential.username, 'SophieCee')
+        self.assertEqual(self.new_credential.social_name, 'twitter')
+        self.assertEqual(self.new_credential.account_name, 'SophieO')
+        self.assertEqual(self.new_credential.password, '1234!')
         
         
 #     def test_save_credentials(self):
