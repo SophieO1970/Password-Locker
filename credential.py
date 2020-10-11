@@ -44,20 +44,20 @@ class Credential:
         return ''.join(secrets.choice(password_chars) for i in range(int(pass_len)))
     # def
     
-    # @classmethod
-    # def find_by_account_name(cls,name):
-    #     '''
-    #     Method that takes in a name and returns a credential that matches that name.
+    @classmethod
+    def find_by_account_name(cls,name):
+        '''
+        Method that takes in a name and returns a credential that matches that name.
 
-    #     Args:
-    #         name: account_name to search for
-    #     Returns :
-    #         credential of person that matches the account_name.
-    #     '''
+        Args:
+            name: account_name to search for
+        Returns :
+            credential of person that matches the account_name.
+        '''
 
-    #     for credential in cls.credential_list:
-    #         if credential.account_name== name:
-    #             return credential
+        for credential in cls.credential_list:
+            if credential.account_name== name:
+                return credential
 
     # @classmethod
     # def copy_credentials(cls, social_name):
