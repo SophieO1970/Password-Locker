@@ -41,7 +41,7 @@ def delete_credential(self):
         Credential.credential_list.remove(self)    
              
     
-def generate_password(length = 10):
+def generate_password(length = 8):
     '''
     Function that generates password automatically
     '''
@@ -62,11 +62,11 @@ def find_credential(account_name):
     '''
     return Credential.find_by_account_name(account_name)
             
-# def copy_credential(credential):
-#     '''
-#     Function that displays saved credentials
-#     '''
-#     return Credential.display_credential()
+def copy_credential(credential):
+    '''
+    Function that displays saved credential
+    '''
+    return Credential.display_credential()
 
 def display_credential(credential):
     '''

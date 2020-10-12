@@ -105,16 +105,16 @@ class TestCredential(unittest.TestCase):
     #     Function to test to if the copying account method copies the correct credential.
     #     '''
         
-    #     self.new_credential.save_credentials()
+    #     self.new_credential.save_credential()
     #     Credential.find_by_account_name("twitter")
 
     #     self.assertEqual(self.new_credential.account_name,pyperclip.paste())
         
-    def test_display_credentials(self):
+    def test_display_credential(self):
         '''
         test method that returns a list of all accounts added
         '''
-        self.assertEqual(Credential.display_credentials(),Credential.credential_list)
+        self.assertEqual(Credential.display_credential(),Credential.credential_list)
         
         
 
