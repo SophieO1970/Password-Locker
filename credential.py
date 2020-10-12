@@ -40,15 +40,6 @@ class Credential:
         delete_credentials method deletes account objects saved in the credential_list.
         '''
         Credential.credential_list.remove(self)
-        
-    def generate_password(length = 10):
-       '''
-       Function that generates password automatically
-       '''
-       letters = string.ascii_lowercase
-       password_generated = ''.join(random.choice(letters) for i in range(length))
-       return password_generated
-
     
     @classmethod
     def check_user(cls,username,password):
@@ -92,15 +83,9 @@ class Credential:
         for credential in cls.credential_list:
             if credential.account_name == account_name:
                 return credential
-
-    @classmethod
-    def copy_credentials(cls, account_name):
-        '''
-        Class method that copies a credential's info after the credential's social account name is entered
-        '''
-        found_credential = cls.find_by_social_name(account_name)
-        return pyperclip.copy(found_credential.account_password)
-    
+            
+            
+            
     @classmethod
     def display_credential(cls):
         '''

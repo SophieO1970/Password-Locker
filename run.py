@@ -49,16 +49,6 @@ def generate_password(length = 10):
     password_generated = ''.join(random.choice(letters) for i in range(length))
     return password_generated
 
-   
-def verify_user(username,password):
-    '''
-    Function that veryfies the existing user
-    
-    '''
-    check_user = Credential.check_user(username,password)
-    return check_user
-
-
 def check_existing_account(account_name):
     '''
     Function that checks if ctredential exists
