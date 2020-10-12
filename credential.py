@@ -41,22 +41,24 @@ class Credential:
         '''
         Credential.credential_list.remove(self)
         
-    def generate_password(self, pass_len=10):
+    def generate_password(length = 10):
+       '''
+       Function that generates password automatically
+       '''
+       letters = string.ascii_lowercase
+       password_generated = ''.join(random.choice(letters) for i in range(length))
+       return password_generated
 
-        password_chars = string.ascii_letters + string.digits + string.punctuation
-
-        return ''.join(secrets.choice(password_chars) for i in range(int(pass_len)))
-    
     
     @classmethod
-    def check_user(cls,user_name,password):
+    def check_user(cls,username,password):
         '''
         Method that checks if the name and password entered exist in the users_list.
         '''
         current_user = ''
         for user in User.user_list:
-        	if (user.user_name == user_name and user.password == password):
-        		current_user = user.user_name
+        	if (user.username == username and user.password == password):
+        		current_user = user.username
         return current_user
 
 
@@ -77,7 +79,7 @@ class Credential:
 
 
     @classmethod
-    def find_by_account_name(cls,name):
+    def find_by_account_name(cls,account_name):
         '''
         Method that takes in a name and returns a credential that matches that name.
 
@@ -88,7 +90,7 @@ class Credential:
         '''
 
         for credential in cls.credential_list:
-            if credential.account_name== name:
+            if credential.account_name == account_name:
                 return credential
 
     @classmethod
@@ -100,7 +102,7 @@ class Credential:
         return pyperclip.copy(found_credential.account_password)
     
     @classmethod
-    def display_credentials(cls):
+    def display_credential(cls):
         '''
         This method displays saved credentials
         '''

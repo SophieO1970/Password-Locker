@@ -23,5 +23,5 @@ class User:
         Method that saves new user instances/object.
         '''
         
-        User.users_list.append(self)
+        User.user_list.append(self)
         
