@@ -18,6 +18,15 @@ def save_user(user):
     Function to save user
     '''
     user.save_user()
+    
+    
+def verify_user(username,password):
+    '''
+    Function that veryfies the existing user.
+    
+    '''
+    check_user = Credential.check_user(username,password)
+    return check_user    
 
     
 def create_credential(username, account_name, password):
@@ -33,12 +42,12 @@ def save_credential(credential):
     '''
     Credential.save_credentials(credential)   
       
-def delete_credential(self):
+def delete_credential(credential):
         
         '''
         delete_credential method deletes account objects saved in the credential_list.
         '''
-        Credential.credential_list.remove(self)    
+        Credential.delete_credential(credential)    
              
     
 def generate_password(length = 8):
@@ -64,13 +73,13 @@ def find_credential(account_name):
             
 def copy_credential(credential):
     '''
-    Function that displays saved credential
+    Function that displays saved credential.
     '''
     return Credential.display_credential()
 
 def display_credential(credential):
     '''
-    Function that displays saved credentials
+    Function that displays the saved credential.
     '''
     return Credential.display_credential()
 
@@ -99,7 +108,7 @@ def main():
             password = input('Enter your password - ')
             save_user(create_user(username, password))
             # print(" ")
-            print(f'New Account Created for: {username} using password: {password}')
+            print(f'New Account has been Created for: {username} using password: {password}')
             print('\n')
 
         elif short_code == 'lg':
@@ -138,7 +147,7 @@ def main():
                         while True:
                             print('\n')
                             print("-"*20)
-                            print('Please select an option for creating a password: \n ep - enter your password \n gp - generate a password \n ex - exit')
+                            print('hello!! Please select an option for creating a password: \n ep - enter your password \n gp - generate a password \n ex - exit')
                             choice = input('Enter an option: ').lower()
                             print("-"*10)
                             
@@ -157,7 +166,7 @@ def main():
 
                         save_credential(create_credential(username,account_name,password))
                         print('\n')
-                        print(f'Credential Created: Account Name: {account_name} - Password: {password}')
+                        print(f'Credential have beeen Created: Account Name: {account_name} - Password: {password}')
                         print('\n')    
                     elif short_code == 'fc':
                         print("Enter the account name you want to search for:")
@@ -173,7 +182,7 @@ def main():
         
                         else:
                                 print('\n')
-                                print("That credential does not exist")
+                                print("Ooops!! That credential does not exist")
                                 
                                 
                     elif short_code == 'rc':
@@ -187,7 +196,7 @@ def main():
                         if find_credential(account_name):
                                 credential = find_credential(account_name)
                                 credential.delete_credentials()									
-                                print("Here is a list of all deleted credentials")
+                                print("Here is a list of all the deleted credentials")
                                 print('\n')
 
 
@@ -206,16 +215,16 @@ def main():
                             print('\n')
                         else:
                             print('\n')
-                            print("You don't seem to have saved any credentials yet. enter cc to create one.")
+                            print("Sorry!! Seems like you don't have any saved credentials yet.Please enter this short code cc to create one.")
                             print('\n')
 
                     elif short_code == 'copy':
                         print(' ')
-                        account_name = input('Enter the account name for the credential password to copy: ')
+                        account_name = input('Enter the account name to copy: ')
                         copy_credentials(account_name)
                         print('\n')
                     else:
-                        print('Wrong option entered. Try again!')
+                        print('Oops!! Wrong option entered.Please try again!')
 
             else:
                 print(' ')
